@@ -1,6 +1,8 @@
 # hugo-lambda-function
 AWS Lambda function to build a Hugo website. Inspired by Ryan Brown's [hugo-lambda](https://github.com/ryansb/hugo-lambda)
 
+Blog Post, https://blog.jolexa.net/post/writing-a-lambda-function-for-hugo/
+
 ## Files
 `main.py` - The actual function that gets ran
 
