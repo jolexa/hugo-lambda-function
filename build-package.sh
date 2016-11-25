@@ -6,7 +6,7 @@ HUGO_VERSION=0.17
 cd $DIR
 
 # Install awscli python lib + deps in buildroot
-pip install awscli -t .
+pip install pyyaml awscli -t .
 
 # Fetch aws cli wrapper from github
 wget https://raw.githubusercontent.com/aws/aws-cli/develop/bin/aws \
