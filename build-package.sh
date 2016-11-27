@@ -9,7 +9,7 @@ cd $DIR
 pip install pyyaml awscli -t .
 
 # Fetch aws cli wrapper from github
-wget https://raw.githubusercontent.com/aws/aws-cli/develop/bin/aws \
+wget https://raw.githubusercontent.com/aws/aws-cli/1.11.21/bin/aws \
 	-O awscli.py
 
 # Fetch hugo release (statically compile go binary)
@@ -23,7 +23,7 @@ rm -rf hugo_${HUGO_VERSION}_linux_amd64
 find . -name "*.pyc" -delete
 
 # Fetch the main script from this repo
-wget https://raw.githubusercontent.com/abdel/hugo-lambda-function/master/main.py
+wget https://raw.githubusercontent.com/jolexa/hugo-lambda-function/master/main.py
 
 # create zip
 zip -r9 /tmp/hugo-lambda-function.zip *
