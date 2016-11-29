@@ -25,7 +25,7 @@ def lambda_handler(event, context):
     zfile.extractall("/tmp/unzipped")
     builddir = "/tmp/unzipped/" + reponame + "-master/"
 
-    subprocess.call("/var/task/hugo_0.15_linux_amd64.go" , shell=True, cwd=builddir)
+    subprocess.call("/var/task/hugo.go" , shell=True, cwd=builddir)
     pushdir = builddir + "public/"
     bucketuri = "s3://" + reponame + "/"
     subprocess.call("python /var/task/awscli.py s3 sync --size-only --delete --sse AES256 " + pushdir + " " + bucketuri, shell=True)
